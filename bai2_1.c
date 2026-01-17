@@ -13,18 +13,38 @@
 //  Nếu a == 0,  
 //   b == 0: Phương trình có vô số nghiệm 
 //   b != 0: Phương trình vô nghiệm 
-//  Ngược lại: Phương trình có nghiệm x = -b/a 
- 
+//  Ngược lại: Phương trình có nghiệm x = -b/a
+
 #include <stdio.h>
 
-int main(){
-    
-    // Khai báo biến
+int main()
+{
+    float a, b, x;
 
+    // Nhập giá trị a và b
+    printf("Nhap a: ");
+    scanf("%f", &a);
 
-    // Nhập dữ liệu
+    printf("Nhap b: ");
+    scanf("%f", &b);
 
+    // Kiểm tra phương trình
+    if (a == 0)
+    {
+        if (b == 0)
+        {
+            printf("Phuong trinh co vo so nghiem\n");
+        }
+        else
+        {
+            printf("Phuong trinh vo nghiem\n");
+        }
+    }
+    else
+    {
+        x = -b / a;
+        printf("Phuong trinh co nghiem x = %.2f\n", x);
+    }
 
-    // Xử lý, tính toán VÀ Hiển thị kết quả
-
+    return 0;
 }
